@@ -56,7 +56,7 @@ function LandingPage() {
 const [stats, setStats] = useState(null);
 
 useEffect(() => {
-  fetch("http://localhost:8086/api/dashboard/summary")
+  fetch(`${import.meta.env.VITE_API_BASE_URL}/dashboard/summary`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch dashboard data");

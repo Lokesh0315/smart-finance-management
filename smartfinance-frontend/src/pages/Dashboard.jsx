@@ -1,8 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:8086/api/dashboard/summary";
-
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/dashboard/summary`;
 function Dashboard() {
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(true);

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const LOAN_API = "http://localhost:8086/api/loans";
-const CUSTOMER_API = "http://localhost:8086/api/customers";
-
+const LOAN_API = `${import.meta.env.VITE_API_BASE_URL}/loans`;
+const CUSTOMER_API = `${import.meta.env.VITE_API_BASE_URL}/customers`;
 function LoanManagement() {
   const [loans, setLoans] = useState([]);
   const [customers, setCustomers] = useState([]);
